@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@reference "tailwindcss/theme.css";
+
+@theme {
+  --color-primary-50: oklch(0.97 0.02 275);
+  --color-primary-100: oklch(0.94 0.03 275);
+  --color-primary-200: oklch(0.89 0.06 275);
+  --color-primary-300: oklch(0.84 0.09 275);
+  --color-primary-400: oklch(0.78 0.12 275);
+  --color-primary-500: oklch(0.72 0.15 275);
+  --color-primary-600: oklch(0.66 0.18 275);
+  --color-primary-700: oklch(0.60 0.21 275);
+  --color-primary-800: oklch(0.54 0.24 275);
+  --color-primary-900: oklch(0.48 0.27 275);
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 min-h-screen;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  .typography {
+    p {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+    }
+    h1 {
+      font-size: var(--text-2xl--line-height);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+  }
+}
